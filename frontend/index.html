@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Catatan Sederhana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-left">
+      <h1>Aplikasi Catatan</h1>
+    </div>
+
+    <div class="header-right">
+      <span class="note-count">Total: <strong id="totalNotesCount">0</strong></span>
+      <button id="btnNewNoteSidebar" class="btn-tambah">Tambah Baru</button>
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+    <div class="note-form-container" id="noteFormPanel">
+      <h3 id="formPanelTitle">Buat Catatan Baru</h3>
+      <form id="noteForm">
+        <input type="hidden" id="noteId">
+        <div class="form-group">
+          <input type="text" id="judul" placeholder="Judul" required>
+        </div>
+        <div class="form-group">
+          <textarea id="isi" rows="3" placeholder="Tulis catatan di sini..." required style="resize: none;"></textarea>
+        </div>
+        <div class="form-buttons">
+          <button type="button" id="btnCancelForm" style="display: none;">Batal</button>
+          <button type="submit" id="btnSubmitForm" class="btn-save">Simpan</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="notes-grid" id="notesGrid">
+      <div class="loading-state" id="loadingState">
+        <p>Memuat catatan...</p>
+      </div>
+
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <p>Catatan masih kosong.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="modal" id="editModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Edit Catatan</h3>
+        <span class="close-modal" id="closeModalBtn">X</span>
+      </div>
+      <form id="editForm">
+        <input type="hidden" id="editNoteId">
+        <div class="form-group">
+          <label>Judul</label>
+          <input type="text" id="editJudul" required>
+        </div>
+        <div class="form-group">
+          <label>Isi Catatan</label>
+          <textarea id="editIsi" rows="5" required style="resize: none;"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-close" id="btnCancelModal">Batal</button>
+          <button type="submit" class="btn-save">Perbarui</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

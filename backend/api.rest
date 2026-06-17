@@ -1,0 +1,31 @@
+@baseUrl = http://localhost:3000/api
+
+###
+GET http://localhost:3000/
+
+###
+GET {{baseUrl}}/notes
+
+###
+POST {{baseUrl}}/notes
+Content-Type: application/json
+
+{
+  "judul": "Catatan Pertama",
+  "isi": "Ini adalah isi dari catatan pertama saya yang dibuat melalui REST Client."
+}
+
+###
+GET {{baseUrl}}/notes/1
+
+###
+PUT {{baseUrl}}/notes/1
+Content-Type: application/json
+
+{
+  "judul": "Catatan Pertama Diupdate",
+  "isi": "Ini isi yang sudah diperbarui."
+}
+
+###
+DELETE {{baseUrl}}/notes/1

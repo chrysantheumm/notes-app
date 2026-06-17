@@ -1,0 +1,271 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #ffffff;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-left h1 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-tambah {
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-tambah:hover {
+  background-color: #eeeeee;
+}
+
+.note-count {
+  font-size: 13px;
+}
+
+.main-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.note-form-container {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.note-form-container h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #333333;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 5px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #666666;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #cccccc;
+  font-family: inherit;
+  font-size: 13px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-save {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #333333;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-save:hover {
+  background-color: #555555;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.note-card {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 130px;
+}
+
+.note-card-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  color: #000000;
+}
+
+.note-card-date {
+  font-size: 10px;
+  color: #777777;
+  margin-bottom: 8px;
+}
+
+.note-card-body {
+  font-size: 12px;
+  color: #333333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+
+.note-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  border-top: 1px solid #eeeeee;
+  padding-top: 5px;
+}
+
+.btn-edit, .btn-delete {
+  background: none;
+  border: none;
+  color: #666666;
+  cursor: pointer;
+  padding: 3px 5px;
+  font-size: 12px;
+}
+
+.btn-edit:hover, .btn-delete:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.loading-state, .empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 20px;
+  color: #666666;
+  font-size: 13px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  width: 90%;
+  max-width: 450px;
+  padding: 15px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 5px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.close-modal {
+  font-size: 18px;
+  cursor: pointer;
+  color: #666666;
+}
+
+.close-modal:hover {
+  color: #000000;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn-close {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-close:hover {
+  background-color: #eeeeee;
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1000;
+}
+
+.toast {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 8px 12px;
+  border: 1px solid #333333;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

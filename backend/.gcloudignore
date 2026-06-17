@@ -1,0 +1,7 @@
+.gcloudignore
+.git
+.gitignore
+node_modules/
+.env
+api.rest
+package-lock.json
