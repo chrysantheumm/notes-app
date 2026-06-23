@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = 'https://notes-123230191-dot-tcc-project-galih.uc.r.appspot.com/api';
 
 const notesGrid = document.getElementById('notesGrid');
 const loadingState = document.getElementById('loadingState');
