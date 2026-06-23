@@ -1,4 +1,4 @@
-runtime: nodejs18
+runtime: nodejs22
 instance_class: F1
 env_variables:
   NODE_ENV: "production"
@@ -6,3 +6,4 @@ env_variables:
   DB_USER: "admin"
   DB_PASSWORD: "mypassword"
   DB_NAME: "notes_123230191"
+  DB_PORT: "3306"
