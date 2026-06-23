@@ -2,3 +2,7 @@ runtime: nodejs18
 instance_class: F1
 env_variables:
   NODE_ENV: "production"
+  DB_HOST: "34.172.113.167"
+  DB_USER: "admin"
+  DB_PASSWORD: "mypassword"
+  DB_NAME: "notes_123230191"
